@@ -18,6 +18,18 @@ import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 
+
+import { RouterModule, Routes} from '@angular/router';
+const router : Routes = [
+  {path:'inicio', component: InicioComponent},
+  {path:'login', component: LoginComponent},
+  {path:'', redirectTo:'/inicio', pathMatch:'full'}
+  
+
+
+];
+
+
 @Component({
     selector: 'app-root',
     standalone: true,
@@ -40,7 +52,8 @@ import { RodapeComponent } from './rodape/rodape.component';
        LoginComponent,
        MenuComponent,
        RodapeComponent,
-       Comp2Component]
+       Comp2Component,
+       RouterModule]
 })
 export class AppComponent {
   title = 'projeto-angular';
